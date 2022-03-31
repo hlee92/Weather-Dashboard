@@ -15,15 +15,9 @@ function weatherByCityName(cityName) {
 
 }
 
-//weatherByCityName('Baltimore').then(function (response) { console.log(response) })
-
 function addCityToHistory(cityName, lon, lat) {
     var item = localStorage.getItem('history');
     var currentHistory = item === null ? [] : JSON.parse(item)
-    //debugger;
-    //if (currentHistory.length > 10) {
-    //    currentHistory.splice(0, currentHistory.length - 10);
-    //}
 
     currentHistory.push({ cityName: cityName, lon: lon, lat: lat })
     localStorage.setItem('history', JSON.stringify(currentHistory))
@@ -68,16 +62,16 @@ function clearHistory() {
     createHistoryList();
 }
 
-
-
 var searchInputEl = document.querySelector("#enter-city");
+
+
 //WHEN I view current weather conditions for that city
 //THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
 var todaysWeatherElId = "#today-weather";
 
 function setDisplayedWeather(weatherData, city) {
 
-    document.querySelector('#city-name').innerHTML = `${city} (${new Date().toDateString()})`;
+    document.querySelector('#city-name').innerHTML = `${city} (${new Date(weatherData.current.dt * 1000).toDateString()})`;
     document.querySelector("#current-pic").src = `http://openweathermap.org/img/w/${weatherData.current.weather[0].icon}.png`;
     document.querySelector('#temperature').innerHTML = weatherData.current.temp;
     document.querySelector('#humidity').innerHTML = weatherData.current.humidity;
@@ -88,16 +82,12 @@ function setDisplayedWeather(weatherData, city) {
     if (uvi <= 2) {
         uvColor = 'bg-success'
     }
-
     else if (uvi > 2 && uvi < 5) {
         uvColor = 'bg-warning'
     }
-
     else {
         uvColor = 'bg-danger'
-
     }
-
 
     document.querySelector('#uv-index').innerHTML = `<span class="badge ${uvColor}">${weatherData.current.uvi}</span>`;
     var fivedayitems = ""
@@ -113,24 +103,3 @@ function setDisplayedWeather(weatherData, city) {
     }
     document.querySelector("#fivedayrows").innerHTML = fivedayitems
 }
-
-
-//WHEN I view the UV index
-//THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-
-
-
-
-
-//WHEN I view future weather conditions for that city
-//THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-
-
-
-
-
-
-
-
-//WHEN I click on a city in the search history
-//THEN I am again presented with current and future conditions for that city//
