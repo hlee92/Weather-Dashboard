@@ -27,8 +27,8 @@
                         </button>
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
-                <form id="history"></form>
+                <button class="btn btn-primary mb-3" onclick="clearHistory()" type="button" id="clear-history">Clear history</button>
+                <div id="history" class="list-group"></div>
             </div>
             <div class="col-lg-9">
                 <div class="row mr-0">
@@ -48,12 +48,8 @@
                         <h3>5-Day Forecast</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                <div class="row" id="fivedayrows">                
+                   
                 </div>
             </div>
         </div>
