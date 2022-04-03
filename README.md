@@ -13,5 +13,6 @@ GitHub: https://github.com/hlee92/Weather-Dashboard
 
 Deployed: https://hlee92.github.io/Weather-Dashboard/
 
-![screencapture-hlee92-github-io-Weather-Dashboard-2022-04-03-15_41_37](https://user-images.githubusercontent.com/91634095/161445279-551e4d4a-f53e-40c2-89f7-f7df6d595023.png)
+![screencapture-hlee92-github-io-Weather-Dashboard-2022-04-03-15_48_51](https://user-images.githubusercontent.com/91634095/161445568-13419f08-baf0-4743-b274-59c9d4569ce6.png)
+
 
