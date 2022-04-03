@@ -7,4 +7,4 @@ The goal of this challenge/project was to create a weather dashboard.
 
 2. On the left-hand side, you'll see the history of cities searched. You have the option of clearing the history.
 
-3. There is a five day forecast feature that lets you see the weather in advanced so you plan your trip accordingly!
+3. There is a five day forecast feature that let's you see the weather in advanced so you can plan your trip accordingly!
